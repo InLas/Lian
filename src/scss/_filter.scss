@@ -1,0 +1,51 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 15px 0;
+
+  border-top: 1px solid #777777;
+  border-bottom: 1px solid #777777;
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 5px;
+      right: 0;
+
+      width: 11px;
+      height: 28px;
+
+      background-image: url(../img/svg/bread-crumbs.svg);
+    }
+  }
+
+  &__link {
+    display: block;
+
+    font-weight: bold;
+
+    padding: 10px 30px;
+
+    color: inherit;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

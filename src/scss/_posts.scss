@@ -1,0 +1,302 @@
+.posts {
+
+  &__container {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 50px;
+
+    @media (min-width: $tablet-width) {
+      flex: 1 1 50%;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex: 1 1 750 / 1200 * 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    list-style: none;
+
+    margin: 0;
+    margin-bottom: 65px;
+    padding: 0;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+
+      column-count: 2;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+
+    max-width: 360px;
+
+    margin-bottom: 35px;
+  }
+
+  &__figure {
+    margin: 0;
+  }
+
+  &__wrap {
+    position: relative;
+
+    &:hover,
+    &:focus-within {
+      .posts__cover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  &__link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font: inherit;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+    box-sizing: border-box;
+
+    width: 125px;
+
+    padding: 5px 0;
+
+    color: #ffffff;
+    background-color: #959595;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &__description {
+    box-sizing: border-box;
+
+    padding: 30px 35px 40px 45px;
+
+    background-color: #ffffff;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 30px;
+
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    color: #333333;
+  }
+
+  &__sub-title {
+    display: block;
+
+    font-size: 13px;
+    line-height: 100%;
+
+    position: relative;
+
+    margin-bottom: 35px;
+    padding-left: 17px;
+
+    color: #cccccc;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 14px;
+      height: 13px;
+
+      background-image: url(../img/svg/human-icon.svg);
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+  }
+
+  &__box {
+    display: flex;
+  }
+
+  &__date {
+    font-size: 13px;
+    line-height: 100%;
+
+    position: relative;
+
+    padding-left: 20px;
+
+    color: #9a9a9a;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 13px;
+      height: 14px;
+
+      background-image: url(../img/svg/calendar-icon.svg);
+    }
+  }
+
+  &__share {
+    font-size: 0;
+    line-height: 0;
+
+    position: relative;
+
+    width: 15px;
+    height: 15px;
+
+    margin-left: auto;
+    margin-right: 25px;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 15px;
+      height: 15px;
+
+      background-image: url(../img/svg/share-icon-posts.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__like {
+    font-size: 0;
+    line-height: 0;
+
+    position: relative;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 15px;
+      height: 15px;
+
+      background-image: url(../img/svg/heart-posts.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__video {
+    width: 320px;
+
+    @media (min-width: $tablet-width) {
+      width: 360px;
+    }
+  }
+
+  &__button {
+    font: inherit;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    box-sizing: border-box;
+
+    width: 125px;
+
+    padding: 5px 0;
+
+    color: #ffffff;
+    background-color: #959595;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__aside {
+    @media (min-width: $tablet-width) {
+      flex: 1 1 50%;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex: 1 1 360 / 1200 * 100%;
+    }
+  }
+}

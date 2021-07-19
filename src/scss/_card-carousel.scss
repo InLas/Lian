@@ -1,0 +1,66 @@
+.card-carousel {
+  width: 100%;
+
+  &__list {
+    list-style: none;
+
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+
+    &--small {
+      display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 10px;
+
+      &--small {
+        display: block;
+
+        width: 550px;
+
+        margin: 0 auto;
+        margin-bottom: 50px;
+
+        & .slick-track {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        & .slick-current {
+          position: relative;
+      
+            &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+      
+            width: 100%;
+            height: 100%;
+      
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            z-index: 100;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    @media (min-width: $tablet-width) {
+      margin-right: 10px;
+
+      cursor: pointer;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__img {
+    margin: auto;
+  }
+}

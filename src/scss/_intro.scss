@@ -1,0 +1,185 @@
+.intro {
+  margin-bottom: 30px;
+  padding-top: 90px;
+
+  &--inner {
+    margin-bottom: 70px;
+  }
+
+  &--portfolio-item {
+    margin-bottom: 0;
+  }
+
+  &__container {
+    max-width: 1600px;
+
+    margin: 0 auto;
+  }
+
+  &__list {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    height: 325px;
+    
+    &--1 {
+      background-image: url(../img/slider-1.jpg);
+      background-repeat: no-repeat;
+      background-position: 0px 0px;
+      background-size: auto;
+    }
+
+    &--2 {
+      background-image: url(../img/slider-2.jpg);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      height: 650px;
+
+      &--1 {
+        background-image: url(../img/slider-1-tablet.jpg);
+      }
+  
+      &--2 {
+        background-image: url(../img/slider-2-tablet.jpg);
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &--1 {
+        background-image: url(../img/slider-1-desktop.jpg);
+      }
+
+      &--2 {
+        background-image: url(../img/slider-2-desktop.jpg);
+      }
+    }
+  }
+
+  &__banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 350px;
+
+    &--about {
+      background-image: url(../img/intro-about.jpg);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--portfolio {
+      background-image: url(../img/intro-portfolio.jpg);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--blog {
+      background-image: url(../img/intro-blog.jpg);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      justify-content: flex-start;
+
+      &--about {
+        background-image: url(../img/intro-about-tablet.jpg);
+      }
+
+      &--portfolio {
+        background-image: url(../img/intro-portfolio-tablet.jpg);
+      }
+
+      &--blog {
+        background-image: url(../img/intro-blog-tablet.jpg);
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &--about {
+        background-image: url(../img/intro-about-desktop.jpg);
+      }
+
+      &--portfolio {
+        background-image: url(../img/intro-portfolio-desktop.jpg);
+      }
+
+      &--blog {
+        background-image: url(../img/intro-blog-desktop.jpg);
+      }
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: $tablet-width) {
+      width: 100%;
+
+      padding: 0 20px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    @media (min-width: $tablet-width) {
+      &--inner {
+        align-items: start;
+  
+        text-align: left;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 300;
+
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    color: #ffffff;
+    background-color: #000000;
+
+    @media (min-width: $tablet-width) {
+      font-size: 48px;
+
+      padding: 10px 35px;
+    }
+  }
+
+  &__text {
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: 4px;
+
+    margin: 0;
+    padding: 0;
+
+    color: #000000;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
+  }
+}

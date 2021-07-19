@@ -1,0 +1,74 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+  @font-face {
+  font-family: $font_name;
+  font-display: swap;
+  src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+  font-weight: #{$weight};
+  font-style: #{$style};
+  }
+}
+
+@import 'global/fonts.scss';
+
+@import 'global/variables.scss';
+
+@import 'global/global.scss';
+
+@import '_page.scss';
+
+@import '_page-header.scss';
+
+@import '_slider.scss';
+
+@import '_intro.scss';
+
+@import '_filter.scss';
+
+@import '_masonry.scss';
+
+@import '_gallery.scss';
+
+@import '_social.scss';
+
+@import '_svg.scss';
+
+@import '_page-footer.scss';
+
+@import '_ranges.scss';
+
+@import '_about-us.scss';
+
+@import '_our.scss';
+
+@import '_our-team.scss';
+
+@import '_card-nav.scss';
+
+@import '_card-carousel.scss';
+
+@import '_card.scss';
+
+@import '_related-works.scss';
+
+@import '_posts.scss';
+
+@import '_recent.scss';
+
+@import '_tags.scss';
+
+@import '_instagram.scss';
+
+@import '_aside.scss';
+
+@import '_single-post.scss';
+
+@import '_form.scss';
+
+@import '_comment.scss';
+
+@import '_info.scss';
+
+@import '_map.scss';
+
+@import '_our-values.scss';

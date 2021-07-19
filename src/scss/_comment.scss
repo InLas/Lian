@@ -1,0 +1,23 @@
+.comment {
+
+  &__container {
+    max-width: 810px;
+
+    padding: 0 15px;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+
+    color: #000000;
+  }
+}
