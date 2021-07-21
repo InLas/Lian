@@ -1116,6 +1116,7 @@ picture {
 
 .card-nav__link {
   font-size: 13px;
+  line-height: 100%;
   text-transform: uppercase;
   font-weight: bold;
   position: relative;
@@ -1170,6 +1171,7 @@ picture {
 .card-nav__link--show::before {
   left: 0;
   width: 15px;
+  height: 11px;
   background-image: url(../img/svg/card-nav-show.svg);
   background-repeat: no-repeat;
 }
