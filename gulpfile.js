@@ -11,6 +11,7 @@ let path = {
     img: project + "/img/",
     fonts: project + "/fonts/",
     slick: project + "/slick/",
+    json: project + "/json/",
   },
   src: {
     html: [source + "/*.html", '!' + source + "/_*.html"],
@@ -19,12 +20,14 @@ let path = {
     img: source + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source + "/fonts/*.ttf",
     slick: source + "/slick/**",
+    json: source + "/json/*.json",
   },
   watch: {
     html: source + "/**/*.html",
     css: source + "/scss/**/*.scss",
     js: source + "/js/**/*.js",
     img: source + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+    json: source + "/json/*.json",
   },
   clean: "./" + project + "/"
 };
@@ -134,6 +137,12 @@ function slick() {
     .pipe(browsersync.stream())
 };
 
+function json() {
+  return src(path.src.json)
+    .pipe(dest(path.build.json))
+    .pipe(browsersync.stream())
+};
+
 function fonts(params) {
   src(path.src.fonts)
     .pipe(ttf2woff())
@@ -198,9 +207,10 @@ function clean(params) {
   return del(path.clean);
 };
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, slick), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, slick, json), fontsStyle);
 let watch = gulp.parallel(watchFiles, build, browserSync);
 
+exports.json = json;
 exports.slick = slick;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
