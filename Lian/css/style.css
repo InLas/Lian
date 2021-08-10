@@ -611,8 +611,7 @@ picture {
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
-  height: auto;
-  margin: 0 -30px;
+  margin: 0;
   padding: 0;
 }
 
